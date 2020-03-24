@@ -1,0 +1,23 @@
+#anim
+{
+    padding:  100px;
+    background-color: greenyellow;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 1s;
+}
+#anim:hover
+{
+    padding:  200px;
+    background-color: rgba(172, 255, 47, 50);
+    text-align: center;
+    display: inline-block;
+}
+
+ol li 
+{
+    color:greenyellow;
+}
+a{
+    color: red;
+}
