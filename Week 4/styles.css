@@ -1,0 +1,37 @@
+p+p {
+    color: red;
+}
+
+p+p+p {
+    color: blue;
+}
+
+table {
+    border-collapse: collapse;
+    transition-duration: 2s;
+}
+table:hover
+{
+    transform: translate(100px,100px);
+    background-color: hotpink;
+}
+
+td, th {
+    padding: 20px;
+    border: 1px yellowgreen solid;
+}
+table td:first-child
+{
+    color: greenyellow;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+p::selection
+{
+    color: rgba(0,0,0,0);
+}
