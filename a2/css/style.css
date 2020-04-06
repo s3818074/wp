@@ -1,0 +1,188 @@
+.primary-bg {
+    background-color: #3a000ee8;
+}
+
+.header-bg {
+    background-color: #00000000;
+}
+
+.pink-bg {
+    background-color: #5a005a96;
+}
+
+.grey-bg {
+    background-color: #292929;
+}
+
+.secondary-bg {
+    background-color: #0a001be7;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/poppins.ttf)
+}
+
+* {
+    font-family: Poppins;
+}
+
+body {
+    background-image: url("../images/bg.jpg");
+    background-size: 100%;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+nav .nav-item {
+    margin-left: 40px;
+}
+
+.primary-txt {
+    color: #d43333;
+}
+
+.secondary-txt {
+    color: #ffd900
+}
+
+h1, #prices th {
+    color: #d43333;
+}
+
+h2 {
+    color: #c00000;
+}
+
+p, #prices td {
+    color: #ffd900
+}
+
+.jumbotron {
+    margin: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+header h1 {
+    font-size: 500%;
+}
+
+
+
+#about-us>.parallax>.secondary-bg {
+    width: 75%;
+    margin: auto;
+}
+
+#about-us>.parallax>.parallax {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+#prices .jumbotron {
+    background-color: rgba(255, 253, 124, 0.329);
+    margin-bottom: 10px;
+}
+
+section .jumbotron {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px
+}
+
+
+#prices table {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    background-color: rgba(31, 22, 22, 0.911);
+}
+
+#prices table th {
+    border: black solid 1px;
+}
+
+#prices table td {
+    border: black solid 1px;
+}
+
+#lobby {
+    height: 500px;
+    background-image: url("../images/lobby.jpg");
+}
+
+#seat {
+    height: 500px;
+    background-image: url("../images/seat.jpg");
+}
+
+#dolby {
+    height: 500px;
+    background-image: url("../images/dolby.jpg");
+}
+
+.movie-panel
+{
+    width:75%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+.movie-poster
+{
+    width: 250px;
+    height: 350px;
+    margin:20px
+}
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.indent-2
+{
+    text-indent: 2em;
+}
+.parallax {  
+    /* this class is meant to be overrided only */
+    background-image: url("../images/bg1.jpg");
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#about-us>.parallax {
+    background-image: url("../images/bg1.jpg");
+    padding: 20px;
+}
+#prices>.parallax {
+    background-image: url(../images/bg2.jpg);
+    padding: 20px;
+}
+#now-showing>.parallax
+{
+    background-image: url('../images/cinema.jpg');
+    padding: 20px;
+}
+
+section h1 {
+    font-size: 400%;
+}
+
+section h2 {
+    font-size: 150%;
+}
