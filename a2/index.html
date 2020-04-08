@@ -36,7 +36,7 @@
         <a class="nav-link nav-item-bg primary-txt" href="#prices">Prices</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-item-bg primary-txt" href="#">Now showing</a>
+        <a class="nav-link nav-item-bg primary-txt" href="#now-showing">Now showing</a>
       </li>
     </ul>
   </nav>
@@ -264,21 +264,64 @@
             </div>
           </div>
         </div>
+        <div id='sypnosis' class="primary-bg">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-9 mg-auto">
+                  <h1>Avengers: Endgame</h1>
+                </div>
+                <div class="col-lg-3 mg-auto">
+                  <h2 class='secondary-txt'>PG-13</h2>
+                </div>
+                <div class='mg-vertical'>
+                  <h2>Plot description</h2>
+                  <p id='plot-description'>
+                    After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the
+                    efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once
+                    more in order to undo Thanos's actions and undo the chaos to the universe, no matter what
+                    consequences
+                    may be in store, and no matter who they face...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Make a Booking:</h2>
+            </div>
+            <div class="col-sm-8">
+              <button>Mon - </button>
+              <button>Tue - </button>
+              <button>Wed - 9pm (T21)</button>
+              <button>Thu - 9pm (T21)</button>
+              <button>Fri - 9pm (T21)</button>
+              <button>Sat - 6pm (T18) </button>
+              <button>Sun - 6pm (T18) </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
+  <footer class='secondary-txt'>
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified
+      </script> Truong Duc Khai, s3818074. Last modified
       <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
+
   <script src="js/nav_bar.js"></script>
 
 </body>

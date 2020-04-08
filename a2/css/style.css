@@ -36,7 +36,10 @@ body {
     width: 200px;
     height: 200px;
 }
-
+nav
+{
+    z-index: 1;
+}
 nav .nav-item {
     margin-left: 40px;
 }
@@ -75,7 +78,49 @@ header h1 {
     font-size: 500%;
 }
 
-
+#sypnosis
+{
+    margin:auto;
+    padding:50px;
+    width:90%
+}
+#sypnosis button
+{
+    background-color: #b400b496 ;
+    border: none;
+    padding:5px;
+    margin:5px;
+}
+#sypnosis .row
+{
+    padding-bottom: 30px;
+}
+#sypnosis .mg-auto
+{
+    margin:auto
+}
+#sypnosis .mg-vertical
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#sypnosis iframe
+{
+    width:100%;
+    height:315px;
+}
+#sypnosis h1
+{
+    font-size:250%
+}
+#sypnosis p
+{
+    font-size: 100%;
+}
+#plot-description
+{
+    font-size:50%
+}
 
 #about-us>.parallax>.secondary-bg {
     width: 75%;
@@ -90,7 +135,7 @@ header h1 {
 
 
 #prices .jumbotron {
-    background-color: rgba(255, 253, 124, 0.329);
+    background-color: rgba(255, 241, 112, 0.479);
     margin-bottom: 10px;
 }
 
