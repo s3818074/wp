@@ -22,7 +22,16 @@
     font-family: Poppins;
     src: url(../fonts/poppins.ttf)
 }
-
+@font-face
+{
+    font-family:Anton;
+    src: url('../fonts/anton.ttf');
+}
+#brand
+{
+    font-family: Anton;
+    font-size:600%;
+}
 * {
     font-family: Poppins;
 }
@@ -84,11 +93,16 @@ header h1 {
     padding:50px;
     width:90%
 }
+#now-showing .card
+{
+    margin:30px auto;
+}
 #sypnosis button
 {
-    background-color: #b400b496 ;
+    background-color: #5a005a96 ;
     border: none;
-    padding:5px;
+    color:#ffd900;
+    padding:10px;
     margin:5px;
 }
 #sypnosis .row
@@ -120,6 +134,9 @@ header h1 {
 #plot-description
 {
     font-size:50%
+}
+#about-us .jumbotron {
+    margin-bottom: 20px;
 }
 
 #about-us>.parallax>.secondary-bg {
