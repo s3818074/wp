@@ -89,7 +89,7 @@ header h1 {
     font-size: 500%;
 }
 
-#sypnosis
+#synopsis
 {
     margin:auto;
     padding:50px;
@@ -99,7 +99,7 @@ header h1 {
 {
     margin:30px auto;
 }
-#sypnosis button
+#synopsis button
 {
     background-color: #5a005a96 ;
     border: none;
@@ -107,29 +107,29 @@ header h1 {
     padding:10px;
     margin:5px;
 }
-#sypnosis .row
+#synopsis .row
 {
     padding-bottom: 30px;
 }
-#sypnosis .mg-auto
+#synopsis .mg-auto
 {
     margin:auto
 }
-#sypnosis .mg-vertical
+#synopsis .mg-vertical
 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-#sypnosis iframe
+#synopsis iframe
 {
     width:100%;
     height:315px;
 }
-#sypnosis h1
+#synopsis h1
 {
     font-size:250%
 }
-#sypnosis p
+#synopsis p
 {
     font-size: 100%;
 }
