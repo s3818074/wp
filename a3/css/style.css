@@ -42,7 +42,10 @@ body {
     background-image: url("../images/bg.jpg");
     background-size: 100%;
 }
-
+.highlight
+{
+    background-color: #b99e00c0;
+}
 .logo {
     width: 200px;
     height: 200px;

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 3</title>
+  <!-- Keep wireframe.css for debugging, add your css to style.css -->
+  <link id='stylecss' type="text/css" rel="stylesheet" href="../style.css">
+  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src='../wireframe.js'></script>
+  <!-- My css -->
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="jumbotron text-center header-bg">
+      <img class="logo" src="images/logo1.png">
+
+      <h1 id='brand'>Cinemax</h1>
+      <p>Welcome to our cinema</p>
+    </div>
+  </header>
+  <nav id='nav-bar'>
+    <ul class="nav justify-content-center secondary-bg">
+      <li class="nav-item">
+        <a class="nav-link nav-item-bg primary-txt" href="#about-us">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-item-bg primary-txt" href="#prices">Prices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-item-bg primary-txt" href="#now-showing">Now showing</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section id='about-us'>
+      <div class="parallax">
+        <div class="jumbotron primary-bg">
+          <h1>About us</h1>
+          <p>Cinemax is one of the largest cinema chain in Vietnam founded in 2019. The name 'Cinemax' originates from
+            our
+            goals to maximize our customers cinema experience. </p>
+          <p>For that reason, we are going to close our cinema for a major upgrade and expecting to have a grand
+            reopening
+            in 2020 Summer with these following changes: </p>
+        </div>
+        <div class="jumbotron secondary-bg">
+          <h2>Renovation in cinema lobby</h2>
+          <p>We believe that the experience before watching a movie is also important. Our lobby will have more seats,
+            more digital screens and posters. </p>
+        </div>
+        <div id="lobby" class="parallax">
+        </div>
+        <div class="jumbotron secondary-bg">
+          <h2>Reclinable first class seats</h2>
+          <p>Besides standard seats, we introduce first class seats for customer who want to be comfortable and immerse
+            themselves into the movies.</p>
+        </div>
+        <div id="seat" class="parallax">
+        </div>
+        <div class="jumbotron secondary-bg">
+          <h2>
+            3D Dolby Vision projection and Dolby Atmos sound
+          </h2>
+          <p>
+            Enhancing visual and audio effects, bringing you into another reality.
+          </p>
+        </div>
+        <div id="dolby" class="parallax"></div>
+      </div>
+    </section>
+    <section id='prices'>
+      <div class='parallax'>
+        <div class='jumbotron primary-bg'>
+          <h1>Prices</h1>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>
+                Seat Type</th>
+              <th>
+                Seat Code</th>
+              <th>All day Monday and Wednesday AND 12pm on Weekdays</th>
+              <th>All other times</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Standard Adult</td>
+              <td>STA</td>
+              <td>14.00</td>
+              <td>
+                19.80</td>
+            </tr>
+            <tr>
+              <td>Standard Concession</td>
+              <td>STP</td>
+              <td>12.50</td>
+              <td>17.50</td>
+            </tr>
+            <tr>
+              <td>Standard Child</td>
+              <td>STC</td>
+              <td>11.00</td>
+              <td>15.30</td>
+            </tr>
+            <tr>
+              <td>First Class Adult</td>
+              <td>FCA</td>
+              <td>24.00</td>
+              <td>30.00</td>
+            </tr>
+            <tr>
+              <td>First Class Concession</td>
+              <td>FCP</td>
+              <td>22.50</td>
+              <td>27.00</td>
+            </tr>
+            <tr>
+              <td>First Class Child</td>
+              <td>FCC</td>
+              <td>21.00</td>
+              <td>24.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id='now-showing'>
+      <div class='parallax'>
+        <div class='jumbotron pink-bg'>
+          <h1>Now showing</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card movie-panel secondary-bg">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="card-img-top movie-poster" src="images/avengers.jpg" alt="Avengers: Endgame">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <p class="primary-txt movie-title"><b>Avengers: Endgame</b></p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>PG-13</p>
+                      </div>
+                    </div>
+                    <div class="indent-2">
+                      <p class="card-text secondary-txt">Mon - </p>
+                      <p class="card-text secondary-txt">Tue - </p>
+                      <p class="card-text secondary-txt">Wed - 9pm (T21)</p>
+                      <p class="card-text secondary-txt">Thu - 9pm (T21)</p>
+                      <p class="card-text secondary-txt">Fri - 9pm (T21)</p>
+                      <p class="card-text secondary-txt">Sat - 6pm (T18) </p>
+                      <p class="card-text secondary-txt">Sun - 6pm (T18) </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card movie-panel secondary-bg">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="card-img-top movie-poster" src="images/top-end-wedding.jpg" alt="Top End Wedding">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <p class="primary-txt movie-title"><b>Top End Wedding</b></p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>M</p>
+                      </div>
+                    </div>
+                    <div class="indent-2">
+                      <p class="card-text secondary-txt">Mon - 6pm (T18) </p>
+                      <p class="card-text secondary-txt">Tue - 6pm (T18) </p>
+                      <p class="card-text secondary-txt">Wed - </p>
+                      <p class="card-text secondary-txt">Thu - </p>
+                      <p class="card-text secondary-txt">Fri - </p>
+                      <p class="card-text secondary-txt">Sat - 3pm (T15) </p>
+                      <p class="card-text secondary-txt">Sun - 3pm (T15) </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card movie-panel secondary-bg">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="card-img-top movie-poster" src="images/dumbo.jpg" alt="Avengers: Endgame">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <p class="primary-txt movie-title"><b>Dumbo</b></p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>PG</p>
+                      </div>
+                    </div>
+                    <div class="indent-2">
+                      <p class="card-text secondary-txt">Mon - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Tue - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Wed - 6pm (T18)</p>
+                      <p class="card-text secondary-txt">Thu - 6pm (T18)</p>
+                      <p class="card-text secondary-txt">Fri - 6pm (T18)</p>
+                      <p class="card-text secondary-txt">Sat - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Sun - 12pm (T12)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card movie-panel secondary-bg">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="card-img-top movie-poster" src="images/the-happy-prince.jpg" alt="Avengers: Endgame">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <p class="primary-txt movie-title"><b>The Happy Prince</b></p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>R</p>
+                      </div>
+                    </div>
+                    <div class="indent-2">
+                      <p class="card-text secondary-txt">Mon - </p>
+                      <p class="card-text secondary-txt">Tue - </p>
+                      <p class="card-text secondary-txt">Wed - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Thu - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Fri - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Sat - 9pm (T21)</p>
+                      <p class="card-text secondary-txt">Sun - 9pm (T21)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='sypnosis' class="primary-bg">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-9 mg-auto">
+                  <h1>Avengers: Endgame</h1>
+                </div>
+                <div class="col-lg-3 mg-auto">
+                  <h2 class='secondary-txt'>PG-13</h2>
+                </div>
+                <div class='mg-vertical'>
+                  <h2>Plot description</h2>
+                  <p id='plot-description'>
+                    After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the
+                    efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once
+                    more in order to undo Thanos's actions and undo the chaos to the universe, no matter what
+                    consequences
+                    may be in store, and no matter who they face...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Make a Booking:</h2>
+            </div>
+            <div class="col-sm-8">
+              <button>Mon - </button>
+              <button>Tue - </button>
+              <button>Wed - 9pm (T21)</button>
+              <button>Thu - 9pm (T21)</button>
+              <button>Fri - 9pm (T21)</button>
+              <button>Sat - 6pm (T18) </button>
+              <button>Sun - 6pm (T18) </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class='secondary-txt'>
+    <div>&copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script> Truong Duc Khai, s3818074. Last modified
+      <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
+      Programming course at RMIT University in Melbourne, Australia.</div>
+    <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
