@@ -40,7 +40,7 @@ var movieInfo =
         title: 'Avengers: Endgame',
         rating: 'PG-13',
         src: 'https://www.youtube.com/embed/TcMBFSGVi1c',
-        plot: 'After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\'s actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face...',
+        plot: `After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face...`,
         time: {
             MON: '', TUE: '', WED: '9pm (T21)', THU: '9pm (T21)', FRI: '9pm (T21)', SAT: '6pm (T18)', SUN: '6pm (T18)'
         }
@@ -76,19 +76,19 @@ var movieInfo =
 }
 var movieList = document.getElementsByClassName("movie-panel");
 var bookingButtons = document.getElementsByClassName("time-booking");
-var daysInWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI','SAT','SUN']
+var daysInWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI','SAT','SUN'];
+var selectedMovie = 'ACT';
 
 for (let i = 0; i < movieList.length; i++) {
     movieList[i].addEventListener('click', () => displaySypnosis(movieList[i].id))
 }
 function displaySypnosis(id) {
+    selectedMovie = id;
     document.getElementById("sypnosis-title").innerHTML = movieInfo[id]['title'];
     document.getElementById("plot-description").innerHTML = movieInfo[id]['plot'];
     document.getElementById("age-rating").innerHTML = movieInfo[id]['rating'];
     document.getElementById("trailer").src = movieInfo[id]['src'];
     for (let i = 0; i < bookingButtons.length; i++) {
         bookingButtons[i].innerHTML = `${daysInWeek[i]} - ${movieInfo[id]['time'][daysInWeek[i]]}`
-        
     }
-
 }
