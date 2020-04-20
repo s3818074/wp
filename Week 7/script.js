@@ -1,0 +1,3 @@
+function calculatePrice(){
+    alert("Hello");
+}
