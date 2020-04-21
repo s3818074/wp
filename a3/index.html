@@ -160,11 +160,11 @@
                     <div class="indent-2">
                       <p class="card-text secondary-txt">Mon - </p>
                       <p class="card-text secondary-txt">Tue - </p>
-                      <p class="card-text secondary-txt">Wed - 9pm (T21)</p>
-                      <p class="card-text secondary-txt">Thu - 9pm (T21)</p>
-                      <p class="card-text secondary-txt">Fri - 9pm (T21)</p>
-                      <p class="card-text secondary-txt">Sat - 6pm (T18) </p>
-                      <p class="card-text secondary-txt">Sun - 6pm (T18) </p>
+                      <p class="card-text secondary-txt">Wed - 9pm</p>
+                      <p class="card-text secondary-txt">Thu - 9pm</p>
+                      <p class="card-text secondary-txt">Fri - 9pm</p>
+                      <p class="card-text secondary-txt">Sat - 6pm</p>
+                      <p class="card-text secondary-txt">Sun - 6pm</p>
                     </div>
                   </div>
                 </div>
@@ -188,13 +188,13 @@
                       </div>
                     </div>
                     <div class="indent-2">
-                      <p class="card-text secondary-txt">Mon - 6pm (T18) </p>
-                      <p class="card-text secondary-txt">Tue - 6pm (T18) </p>
+                      <p class="card-text secondary-txt">Mon - 6pm</p>
+                      <p class="card-text secondary-txt">Tue - 6pm</p>
                       <p class="card-text secondary-txt">Wed - </p>
                       <p class="card-text secondary-txt">Thu - </p>
                       <p class="card-text secondary-txt">Fri - </p>
-                      <p class="card-text secondary-txt">Sat - 3pm (T15) </p>
-                      <p class="card-text secondary-txt">Sun - 3pm (T15) </p>
+                      <p class="card-text secondary-txt">Sat - 3pm</p>
+                      <p class="card-text secondary-txt">Sun - 3pm</p>
                     </div>
                   </div>
                 </div>
@@ -220,13 +220,13 @@
                       </div>
                     </div>
                     <div class="indent-2">
-                      <p class="card-text secondary-txt">Mon - 12pm (T12)</p>
-                      <p class="card-text secondary-txt">Tue - 12pm (T12)</p>
-                      <p class="card-text secondary-txt">Wed - 6pm (T18)</p>
-                      <p class="card-text secondary-txt">Thu - 6pm (T18)</p>
-                      <p class="card-text secondary-txt">Fri - 6pm (T18)</p>
-                      <p class="card-text secondary-txt">Sat - 12pm (T12)</p>
-                      <p class="card-text secondary-txt">Sun - 12pm (T12)</p>
+                      <p class="card-text secondary-txt">Mon - 12pm</p>
+                      <p class="card-text secondary-txt">Tue - 12pm</p>
+                      <p class="card-text secondary-txt">Wed - 6pm</p>
+                      <p class="card-text secondary-txt">Thu - 6pm</p>
+                      <p class="card-text secondary-txt">Fri - 6pm</p>
+                      <p class="card-text secondary-txt">Sat - 12pm</p>
+                      <p class="card-text secondary-txt">Sun - 12pm</p>
                     </div>
                   </div>
                 </div>
@@ -252,11 +252,11 @@
                     <div class="indent-2">
                       <p class="card-text secondary-txt">Mon - </p>
                       <p class="card-text secondary-txt">Tue - </p>
-                      <p class="card-text secondary-txt">Wed - 12pm (T12)</p>
-                      <p class="card-text secondary-txt">Thu - 12pm (T12)</p>
-                      <p class="card-text secondary-txt">Fri - 12pm (T12)</p>
-                      <p class="card-text secondary-txt">Sat - 9pm (T21)</p>
-                      <p class="card-text secondary-txt">Sun - 9pm (T21)</p>
+                      <p class="card-text secondary-txt">Wed - 12pm</p>
+                      <p class="card-text secondary-txt">Thu - 12pm</p>
+                      <p class="card-text secondary-txt">Fri - 12pm</p>
+                      <p class="card-text secondary-txt">Sat - 9pm</p>
+                      <p class="card-text secondary-txt">Sun - 9pm</p>
                     </div>
                   </div>
                 </div>
@@ -272,7 +272,7 @@
                   <h1 id='synopsis-title'>Avengers: Endgame</h1>
                 </div>
                 <div class="col-lg-3 mg-auto">
-                  <h2 id='age-rating'class='secondary-txt'>PG-13</h2>
+                  <h2 id='age-rating' class='secondary-txt'>PG-13</h2>
                 </div>
                 <div class='mg-vertical'>
                   <h2>Plot description</h2>
@@ -297,16 +297,96 @@
               <h2>Make a Booking:</h2>
             </div>
             <div class="col-sm-8">
-              <button class='time-booking'>MON - </button>
-              <button class='time-booking'>TUE - </button>
-              <button class='time-booking'>WED - 9pm (T21)</button>
-              <button class='time-booking'>THU - 9pm (T21)</button>
-              <button class='time-booking'>FRI - 9pm (T21)</button>
-              <button class='time-booking'>SAT - 6pm (T18) </button>
-              <button class='time-booking'>SUN - 6pm (T18) </button>
+              <button class='time-booking' value='MON'>MON - </button>
+              <button class='time-booking' value='TUE'>TUE - </button>
+              <button class='time-booking' value='WED'>WED - 9pm</button>
+              <button class='time-booking' value='THU'>THU - 9pm</button>
+              <button class='time-booking' value='FRI'>FRI - 9pm</button>
+              <button class='time-booking' value='SAT'>SAT - 6pm</button>
+              <button class='time-booking' value='SUN'>SUN - 6pm</button>
             </div>
           </div>
         </div>
+      </div>
+      <div id='booking-area' class='secondary-bg'>
+        <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+          <label id='movie-info' class='primary-txt'></label>
+          <input id='movie-id' name='movie[id]' hidden>
+          <input id='movie-day' name='movie[day]' hidden>
+          <input id='movie-hour' name='movie[hour]' hidden>
+          <div class='row'>
+            <div class='col-sm-6'>
+              <div class='seat-booking'>
+                <label class='bigger-text'>Standard</label>
+                <div class="form-group">
+                  <label for='STA'>Adults</label>
+                  <select name='seats[STA]' id='STA' class='seat-option'>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for='STP'>Concession</label>
+                  <select name='seats[STP]' id='STP' class='seat-option'>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for='STC'>Children</label>
+                  <select name='seats[STC]' id='STC' class='seat-option'>
+                  </select>
+                </div>
+              </div>
+              <div class='seat-booking'>
+                <label class='bigger-text'>First class</label>
+                <div class="form-group">
+                  <label for='FCA'>Adults</label>
+                  <select name='seats[FCA]' id='FCA' class='seat-option'>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for='FCP'>Concession</label>
+                  <select name='seats[FCP]' id='FCP' class='seat-option'>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for='FCC'>Children</label>
+                  <select name='seats[FCC]' id='FCC' class='seat-option'>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class="form-group">
+                <label for="cust[name]">Name</label>
+                <input type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="cust-name" name="cust[name]" required>
+              </div>
+              <div class="form-group">
+                <label for="cust[email]">Email</label>
+                <input type="email" id="cust-email" name="cust[email]" required>
+              </div>
+              <div class="form-group">
+                <label type='tel' for="cust[mobile]">Mobile</label>
+                <input type="text" pattern="^04(\d\s?){8}$" id="cust-mobile" name="cust[mobile]" required>
+              </div>
+              <div class="form-group">
+                <label for="cust[card]">Credit Card</label>
+                <input type="text" pattern="^(\d\s?){14,19}$" id="cust-card" name="cust[card]" required>
+              </div>
+              <div class="form-group">
+                <label for="cust[expiry]">Expiry</label>
+                <input type='month' id='cust-expiry' name='cust[expiry]' min='2020-01' required>
+              </div>
+            </div>
+
+          </div>
+          <div class='row'>
+            <div class='col-sm-10'>
+              <label id='total-price' class='primary-txt bigger-text'>Price: </label>
+            </div>
+            <div class='col-sm-2'>
+              <input id='order' name='order' type="submit" value="Order" class="secondary-txt primary-bg btn pull-right">
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -321,7 +401,6 @@
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-
   <script src="js/script.js"></script>
 
 </body>

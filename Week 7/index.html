@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <input type='button' id='price' value='Calculate'>
+    <style>
+        input[pattern]:invalid
+        {
+            color: red;
+        }
+    </style>
 
-    <script src="script.js"></script>
+</head>
+
+<body>
+    <input pattern='^(?:\s*\d){8,9}$'type='input' id='name' value='abc'>
+    <p id='message'>Hello</p>
 </body>
+
 </html>

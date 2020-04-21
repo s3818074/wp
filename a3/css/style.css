@@ -160,6 +160,7 @@ header h1 {
     background-color: rgba(255, 241, 112, 0.479);
     margin-bottom: 10px;
 }
+
 section 
 {
     min-height: 100vh;
@@ -241,6 +242,23 @@ section .jumbotron {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#booking-area
+{
+    width: 60%;
+    margin: 100px auto;
+    padding: 50px 50px;
+}
+#movie-info
+{
+    font-size: 200%;
+    margin-bottom: 30px;
+}
+.seat-booking
+{
+    background-color: #ff000062;
+    padding:10px;
+    margin-bottom: 30px;
+}
 #about-us>.parallax {
     background-image: url("../images/bg1.jpg");
     padding: 20px;
@@ -261,4 +279,13 @@ section h1 {
 
 section h2 {
     font-size: 150%;
+}
+label
+{
+    color:#ffe600;
+    margin-right:20px;
+}
+.bigger-text
+{
+    font-size: 200%;
 }

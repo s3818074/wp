@@ -31,8 +31,8 @@ function onScroll() {
         }
     }
 }
-window.onscroll = onScroll;
-
+window.addEventListener("scroll", onScroll);
+// window.onscroll = onScroll;
 // synopsis
 const movieInfo =
 {
@@ -76,21 +76,75 @@ const movieInfo =
 }
 const movieList = document.getElementsByClassName("movie-panel");
 const bookingButtons = document.getElementsByClassName("time-booking");
-const daysInWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI','SAT','SUN'];
-const codeToTime = {'':'',T12:'12PM',T15:'3PM',T18:'6PM',T21:'9PM'}
+const daysInWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+const weekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI']
+const codeToTime = { '': '', T12: '12PM', T15: '3PM', T18: '6PM', T21: '9PM' }
+const discountPrice = { STA: 14.00, STP: 12.50, STC: 11.00, FCA: 24.00, FCP: 22.50, FCC: 21.00 }
+const fullPrice = { STA: 19.00, STP: 17.50, STC: 15.30, FCA: 30.00, FCP: 27.00, FCC: 24.00 }
 var selectedMovie = 'ACT';
+var selectedDay = 'MON';
+var selectedTime = ''
 
+console.log(14.00);
 for (let i = 0; i < movieList.length; i++) {
-    movieList[i].addEventListener('click', () => displaysynopsis(movieList[i].id))
+    movieList[i].addEventListener('click', displaysynopsis);
 }
-displaysynopsis('ACT')
-function displaysynopsis(id) {
-    selectedMovie = movieInfo[id];
-    document.getElementById("synopsis-title").innerHTML = selectedMovie['title'];
-    document.getElementById("plot-description").innerHTML = selectedMovie['plot'];
-    document.getElementById("age-rating").innerHTML = selectedMovie['rating'];
-    document.getElementById("trailer").src = selectedMovie['src'];
+for (let i = 0; i < bookingButtons.length; i++) {
+    bookingButtons[i].addEventListener('click', showBookingForm);
+    bookingButtons[i].addEventListener('click', calculatePrice);
+}
+
+$('#booking-area').hide();
+function showBookingForm() {
+    var day = this.value;
+    var time = movieInfo[selectedMovie]['time'][day];
+    if (time.length == 0) return;
+    $('#booking-area').show();
+    selectedDay = day;
+    selectedTime = time;
+    document.getElementById('movie-id').value = selectedMovie;
+    document.getElementById('movie-day').value = selectedDay;
+    document.getElementById('movie-hour').value = selectedTime;
+    var info = document.getElementById('movie-info');
+    info.innerHTML = `${movieInfo[selectedMovie]['title']} - ${this.innerHTML}`;
+
+}
+function displaysynopsis() {
+    selectedMovie = this.id;
+    document.getElementById("synopsis-title").innerHTML = movieInfo[selectedMovie]['title'];
+    document.getElementById("plot-description").innerHTML = movieInfo[selectedMovie]['plot'];
+    document.getElementById("age-rating").innerHTML = movieInfo[selectedMovie]['rating'];
+    document.getElementById("trailer").src = movieInfo[selectedMovie]['src'];
     for (let i = 0; i < bookingButtons.length; i++) {
-        bookingButtons[i].innerHTML = `${daysInWeek[i]} - ${codeToTime[selectedMovie['time'][daysInWeek[i]]]}`
+        bookingButtons[i].innerHTML = `${bookingButtons[i].value} - ${codeToTime[movieInfo[selectedMovie]['time'][bookingButtons[i].value]]}`;
     }
+}
+var custExpiry = document.getElementById('cust-expiry');
+custExpiry.min = new Date().toISOString().substr(0, 7);
+
+var seatOptions = document.getElementsByClassName('seat-option');
+for (let so = 0; so < seatOptions.length; so++) {
+    seatOptions[so].innerHTML += `<option value = '' >Please select</option> `;
+    for (let i = 1; i < 11; i++) {
+        seatOptions[so].innerHTML += `<option value = '${i}' > ${i}</option> `;
+    }
+    seatOptions[so].addEventListener('change', calculatePrice);
+}
+function calculatePrice() {
+    var price = 0;
+    for (let i = 0; i < seatOptions.length; i++) {
+        if(seatOptions[i].value === '')
+        {0000000
+            continue;
+        }
+        if (selectedDay === 'MON' ||
+            selectedDay === 'WED' ||
+            (weekdays.indexOf(selectedDay) != -1 && selectedTime === 'T12')) {
+            price += discountPrice[seatOptions[i].id] * seatOptions[i].value;
+        }
+        else {
+            price += fullPrice[seatOptions[i].id] * seatOptions[i].value;
+        }
+    }
+    document.getElementById('total-price').innerHTML = `Total $${price.toFixed(2)}`;
 }
