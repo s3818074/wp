@@ -1,19 +1,12 @@
-/* Insert your javascript here */
-
-
-// nav
 const bar = document.getElementById("nav-bar");
 const navLinks = document.getElementsByClassName("nav-link");
+const nav_height = document.getElementsByTagName('nav')[0].clientHeight;
 var sectionOffset = []
 for (let i = 0; i < navLinks.length; i++) {
     let href = navLinks[i].href;
     var id = href.slice(href.lastIndexOf("#") + 1, href.length);
     console.log(document.getElementById(id).offsetTop);
-    sectionOffset.push(document.getElementById(id).offsetTop - 50);
-}
-console.log(sectionOffset)
-var removeHighlight = (item) => {
-    item.classList.remove("highlight");
+    sectionOffset.push(document.getElementById(id).offsetTop - nav_height);
 }
 function onScroll() {
     if (window.pageYOffset > bar.offsetTop) {
@@ -32,8 +25,6 @@ function onScroll() {
     }
 }
 window.addEventListener("scroll", onScroll);
-// window.onscroll = onScroll;
-// synopsis
 const movieInfo =
 {
     ACT: {
@@ -72,10 +63,10 @@ const movieInfo =
             MON: '', TUE: '', WED: 'T12', THU: 'T12', FRI: 'T12', SAT: 'T21', SUN: 'T21'
         }
     }
-
 }
 const movieList = document.getElementsByClassName("movie-panel");
 const bookingButtons = document.getElementsByClassName("time-booking");
+const seatOptions = document.getElementsByClassName('seat-option');
 const daysInWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 const weekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI']
 const codeToTime = { '': '', T12: '12PM', T15: '3PM', T18: '6PM', T21: '9PM' }
@@ -85,7 +76,9 @@ var selectedMovie = 'ACT';
 var selectedDay = 'MON';
 var selectedTime = ''
 
-console.log(14.00);
+document.getElementById('cust-expiry').min = new Date().toISOString().substr(0, 7);
+document.getElementById('booking-area').style.display = 'none';
+
 for (let i = 0; i < movieList.length; i++) {
     movieList[i].addEventListener('click', displaysynopsis);
 }
@@ -94,20 +87,24 @@ for (let i = 0; i < bookingButtons.length; i++) {
     bookingButtons[i].addEventListener('click', calculatePrice);
 }
 
-$('#booking-area').hide();
+for (let so = 0; so < seatOptions.length; so++) {
+    seatOptions[so].innerHTML += `<option value = '' >Please select</option> `;
+    for (let i = 1; i < 11; i++) {
+        seatOptions[so].innerHTML += `<option value = '${i}' > ${i}</option> `;
+    }
+    seatOptions[so].addEventListener('change', calculatePrice);
+}
 function showBookingForm() {
     var day = this.value;
     var time = movieInfo[selectedMovie]['time'][day];
-    if (time.length == 0) return;
-    $('#booking-area').show();
+    if (time === '') return;
+    document.getElementById('booking-area').style.display = '';
     selectedDay = day;
     selectedTime = time;
     document.getElementById('movie-id').value = selectedMovie;
     document.getElementById('movie-day').value = selectedDay;
     document.getElementById('movie-hour').value = selectedTime;
-    var info = document.getElementById('movie-info');
-    info.innerHTML = `${movieInfo[selectedMovie]['title']} - ${this.innerHTML}`;
-
+    document.getElementById('movie-info').innerHTML = `${movieInfo[selectedMovie]['title']} - ${this.innerHTML}`;
 }
 function displaysynopsis() {
     selectedMovie = this.id;
@@ -119,24 +116,10 @@ function displaysynopsis() {
         bookingButtons[i].innerHTML = `${bookingButtons[i].value} - ${codeToTime[movieInfo[selectedMovie]['time'][bookingButtons[i].value]]}`;
     }
 }
-var custExpiry = document.getElementById('cust-expiry');
-custExpiry.min = new Date().toISOString().substr(0, 7);
-
-var seatOptions = document.getElementsByClassName('seat-option');
-for (let so = 0; so < seatOptions.length; so++) {
-    seatOptions[so].innerHTML += `<option value = '' >Please select</option> `;
-    for (let i = 1; i < 11; i++) {
-        seatOptions[so].innerHTML += `<option value = '${i}' > ${i}</option> `;
-    }
-    seatOptions[so].addEventListener('change', calculatePrice);
-}
 function calculatePrice() {
     var price = 0;
     for (let i = 0; i < seatOptions.length; i++) {
-        if(seatOptions[i].value === '')
-        {0000000
-            continue;
-        }
+        if (seatOptions[i].value === '') continue;
         if (selectedDay === 'MON' ||
             selectedDay === 'WED' ||
             (weekdays.indexOf(selectedDay) != -1 && selectedTime === 'T12')) {

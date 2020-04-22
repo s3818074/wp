@@ -17,23 +17,26 @@
 .secondary-bg {
     background-color: #0a001be7;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
+
 @font-face {
     font-family: Poppins;
     src: url(../fonts/poppins.ttf)
 }
-@font-face
-{
-    font-family:Anton;
+
+@font-face {
+    font-family: Anton;
     src: url('../fonts/anton.ttf');
 }
-#brand
-{
+
+#brand {
     font-family: Anton;
-    font-size:600%;
+    font-size: 600%;
 }
+
 * {
     font-family: Poppins;
 }
@@ -42,18 +45,20 @@ body {
     background-image: url("../images/bg.jpg");
     background-size: 100%;
 }
-.highlight
-{
+
+.highlight {
     background-color: #b99e00c0;
 }
+
 .logo {
     width: 200px;
     height: 200px;
 }
-nav
-{
+
+nav {
     z-index: 1;
 }
+
 nav .nav-item {
     margin-left: 40px;
 }
@@ -92,54 +97,54 @@ header h1 {
     font-size: 500%;
 }
 
-#synopsis-area
-{
-    margin:auto;
-    padding:50px;
-    width:90%
+#synopsis-area {
+    margin: auto;
+    padding: 50px;
+    width: 90%
 }
-#now-showing .card
-{
-    margin:30px auto;
+
+#now-showing .card {
+    margin: 30px auto;
 }
-#synopsis-area button
-{
-    background-color: #5a005a96 ;
+
+#synopsis-area button {
+    background-color: #5a005a96;
     border: none;
-    color:#ffd900;
-    padding:10px;
-    margin:5px;
+    color: #ffd900;
+    padding: 10px;
+    margin: 5px;
 }
-#synopsis-area .row
-{
+
+#synopsis-area .row {
     padding-bottom: 30px;
 }
-#synopsis-area .mg-auto
-{
-    margin:auto
+
+#synopsis-area .mg-auto {
+    margin: auto
 }
-#synopsis-area .mg-vertical
-{
+
+#synopsis-area .mg-vertical {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-#synopsis-area iframe
-{
-    width:100%;
-    height:315px;
+
+#synopsis-area iframe {
+    width: 100%;
+    height: 315px;
 }
-#synopsis-area h1
-{
-    font-size:250%
+
+#synopsis-area h1 {
+    font-size: 250%
 }
-#synopsis-area p
-{
+
+#synopsis-area p {
     font-size: 100%;
 }
-#plot-description
-{
-    font-size:50%
+
+#plot-description {
+    font-size: 50%
 }
+
 #about-us .jumbotron {
     margin-bottom: 20px;
 }
@@ -155,22 +160,20 @@ header h1 {
     margin-bottom: 10px;
 }
 
-
 #prices .jumbotron {
     background-color: rgba(255, 241, 112, 0.479);
     margin-bottom: 10px;
 }
 
-section 
-{
+section {
     min-height: 100vh;
 }
+
 section .jumbotron {
     padding: 20px;
     text-align: center;
     margin-top: 20px
 }
-
 
 #prices table {
     text-align: center;
@@ -179,10 +182,11 @@ section .jumbotron {
     margin-top: 100px;
     background-color: rgba(31, 22, 22, 0.911);
 }
-#prices
-{
+
+#prices {
     height: 100vh;
 }
+
 #prices table th {
     border: black solid 1px;
     padding: 40px;
@@ -208,31 +212,31 @@ section .jumbotron {
     background-image: url("../images/dolby.jpg");
 }
 
-.movie-panel
-{
-    width:75%;
+.movie-panel {
+    width: 75%;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 30px;
-    
 }
-.movie-poster
-{
+
+.movie-poster {
     width: 250px;
     height: 350px;
-    margin:20px
+    margin: 20px
 }
+
 .center-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
-.indent-2
-{
+
+.indent-2 {
     text-indent: 2em;
 }
-.parallax {  
+
+.parallax {
     /* this class is meant to be overrided only */
     background-image: url("../images/bg1.jpg");
     height: 100%;
@@ -242,33 +246,35 @@ section .jumbotron {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#booking-area
-{
+
+#booking-area {
     width: 60%;
     margin: 100px auto;
     padding: 50px 50px;
 }
-#movie-info
-{
+
+#movie-info {
     font-size: 200%;
     margin-bottom: 30px;
 }
-.seat-booking
-{
+
+.seat-booking {
     background-color: #ff000062;
-    padding:10px;
+    padding: 10px;
     margin-bottom: 30px;
 }
+
 #about-us>.parallax {
     background-image: url("../images/bg1.jpg");
     padding: 20px;
 }
+
 #prices>.parallax {
     background-image: url(../images/bg2.jpg);
     padding: 20px;
 }
-#now-showing>.parallax
-{
+
+#now-showing>.parallax {
     background-image: url('../images/cinema.jpg');
     padding: 20px;
 }
@@ -280,12 +286,12 @@ section h1 {
 section h2 {
     font-size: 150%;
 }
-label
-{
-    color:#ffe600;
-    margin-right:20px;
+
+label {
+    color: #ffe600;
+    margin-right: 20px;
 }
-.bigger-text
-{
+
+.bigger-text {
     font-size: 200%;
 }
