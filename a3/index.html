@@ -349,7 +349,8 @@
             <div class='col-sm-6'>
               <div class="form-group">
                 <label for="cust[name]">Name</label>
-                <input type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="cust-name" name="cust[name]" required>
+                <input title='Please enter a valid name.' type="text"
+                  pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="cust-name" name="cust[name]" required>
               </div>
               <div class="form-group">
                 <label for="cust[email]">Email</label>
@@ -357,11 +358,13 @@
               </div>
               <div class="form-group">
                 <label type='tel' for="cust[mobile]">Mobile</label>
-                <input type="text" pattern="^04(\d\s?){8}$" id="cust-mobile" name="cust[mobile]" required>
+                <input title='Australian mobile number must have 10 digits and start with 04.' type="text"
+                  pattern="^04(\d\s?){8}$" id="cust-mobile" name="cust[mobile]" required>
               </div>
               <div class="form-group">
                 <label for="cust[card]">Credit Card</label>
-                <input type="text" pattern="^(\d\s?){14,19}$" id="cust-card" name="cust[card]" required>
+                <input title='Credit card number must have 14-19 digits.' type="text" pattern="^(\d\s?){14,19}$"
+                  id="cust-card" name="cust[card]" required>
               </div>
               <div class="form-group">
                 <label for="cust[expiry]">Expiry</label>
@@ -374,7 +377,8 @@
               <label id='total-price' class='primary-txt bigger-text'>Price: </label>
             </div>
             <div class='col-sm-2'>
-              <input id='order' name='order' type="submit" value="Order" class="secondary-txt primary-bg btn pull-right">
+              <input id='order' name='order' type="submit" value="Order"
+                class="secondary-txt primary-bg btn pull-right">
             </div>
           </div>
         </form>
@@ -393,4 +397,5 @@
   </footer>
   <script src="js/script.js"></script>
 </body>
+
 </html>
