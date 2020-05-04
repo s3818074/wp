@@ -98,12 +98,9 @@ for (let so = 0; so < seatOptions.length; so++) {
     seatOptions[so].addEventListener('change', calculatePrice);
 }
 function showBookingForm() {
-    var day = this.value;
-    var time = movieInfo[selectedMovie]['time'][day];
-    if (time === '') return;
     document.getElementById('booking-area').style.display = '';
-    selectedDay = day;
-    selectedTime = time;
+    selectedDay = this.value;
+    selectedTime = movieInfo[selectedMovie]['time'][selectedDay];
     document.getElementById('movie-id').value = selectedMovie;
     document.getElementById('movie-day').value = selectedDay;
     document.getElementById('movie-hour').value = selectedTime;
