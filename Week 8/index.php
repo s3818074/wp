@@ -1,78 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
 </head>
+<!--
+    Valid time: T12,T15,T18,T21,T00
+    Discount: 
+    Mon - Fri except T18 and T21
+    Sat - Sun only T00
+-->
+
 <body>
     <?php
-        # Put your commentS here
-        $name = "Long Nguyen";   //student name
-        $year = 1;
- 
-        define("Pi", 3.14);
-        echo "<h1>Hello World! </h1>";
- 
-        echo "<p>My name is $name. I am a year $year student</p>";
-        echo '<p>My name is $name. </p>';
-        echo Pi;
- 
-        $helloworld = "Hello " . "World.";
-        echo "<p>$helloworld </p>";
- 
-        $year++;
-        $year+=1;
-        echo "$year";
- 
-        echo "</br>";
- 
-        if(5 !=  5.0) echo "Not equal";
-        if(5 !== 5.0) echo "Not identical";
-        
-        echo "</br>";
- 
-        $array = ['A', 'B', 'C'];
-        for ($i =0; $i<count($array); $i++) {
-            echo "$array[$i] ";
+    function isDiscountOrFull($day, $hour)
+    {
+        if(in_array($day,['MON','TUE','WED','THU','FRI']))
+        {
+            if(in_array($hour,['T12','T15','T00'])) return 'Discount';
+            if (in_array($hour,['T18','T21'])) return 'Full';
+            return 'Invalid';
         }
- 
-        $array1 = ['A'=> 'Apple', 'B'=> 'Bear', 'C'=>'Car' ];
- 
-        foreach ($array1 as $key => $value) {
-            echo "<p> Element " . $key . " has the value " . $value . " or " . $array1[$key] . "</p>";
+        if(in_array($day,['SAT','SUN']))
+        {
+            if($hour == 'T00') return 'Discount';
+            if (in_array($hour,['T12','T15','T18','T21'])) return 'Full';
+            return 'Invalid';
         }
- 
-        $love = 'I love you';
-        $greeting1 = 'Hello World,\n$love';
-        $greeting2 = "Hello World,\n$love";
- 
-        echo $greeting2;
- 
-        $meta=<<<"YOLO"
-            <p>This is a multi-line string</p>
-            <p>That renders line breaks</p>
-            <p>And to be clear, the value of \$love is $love</p>
-        YOLO;
- 
-        echo $meta;
- 
-        function hello($name1, $year1) {
-            echo "<p>My name is $name1. I am a year $year1 student</p>";           
+        return 'Invalid';
+    }
+
+    $days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN','FUN'];
+    $hours = ['T12', 'T15', 'T18', 'T21', 'T00','T99'];
+
+    foreach ($days as $day) {
+        foreach ($hours as $hour) {
+            echo "<p> {$day} - {$hour} - " . isDiscountOrFull($day,$hour) . "</p>";
         }
- 
-        hello($name, $year);
- 
-        function divide($num, $den) {
-            return ($den == 0) ?
-              "Denominator can't be zero" :
-              ($num / $den);
-        }
- 
-        $result = divide(10,0);
-        echo "$result";
- 
+        # code...
+    }
+
     ?>
- 
+
 </body>
+
 </html>

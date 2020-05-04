@@ -79,9 +79,12 @@ var selectedTime = ''
 document.getElementById('cust-expiry').min = new Date().toISOString().substr(0, 7);
 document.getElementById('booking-area').style.display = 'none';
 
+
 for (let i = 0; i < movieList.length; i++) {
     movieList[i].addEventListener('click', displaysynopsis);
 }
+movieList[0].click();
+
 for (let i = 0; i < bookingButtons.length; i++) {
     bookingButtons[i].addEventListener('click', showBookingForm);
     bookingButtons[i].addEventListener('click', calculatePrice);
@@ -113,7 +116,14 @@ function displaysynopsis() {
     document.getElementById("age-rating").innerHTML = movieInfo[selectedMovie]['rating'];
     document.getElementById("trailer").src = movieInfo[selectedMovie]['src'];
     for (let i = 0; i < bookingButtons.length; i++) {
-        bookingButtons[i].innerHTML = `${bookingButtons[i].value} - ${codeToTime[movieInfo[selectedMovie]['time'][bookingButtons[i].value]]}`;
+        let timeCode = movieInfo[selectedMovie]['time'][bookingButtons[i].value];
+        if (timeCode === '') {
+            bookingButtons[i].style.display = 'none';
+        }
+        else {
+            bookingButtons[i].style.display = '';
+            bookingButtons[i].innerHTML = `${bookingButtons[i].value} - ${codeToTime[timeCode]}`;
+        }
     }
 }
 function calculatePrice() {

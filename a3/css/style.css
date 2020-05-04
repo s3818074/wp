@@ -18,6 +18,7 @@
     background-color: #0a001be7;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -46,7 +47,7 @@ body {
     background-size: 100%;
 }
 
-.highlight,.nav-link:hover {
+.highlight, .nav-link:hover {
     background-color: #b99e00c0;
 }
 
