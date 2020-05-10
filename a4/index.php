@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang='en'>
 
+<!DOCTYPE html>
+<?php 
+include('tools.php');
+ include("validate.php");?>
+<html lang='en'>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src='../wireframe.js'></script>
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <?php include('tools.php'); ?>
 </head>
-
 <body>
     <header>
         <div class="jumbotron text-center header-bg">

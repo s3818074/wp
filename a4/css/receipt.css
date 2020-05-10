@@ -1,0 +1,56 @@
+.A4
+{
+    height:297mm;
+    width:210mm;
+    page-break-after: always;
+}
+.page-header
+{
+    margin: 30px;
+}
+th,td,thead
+{
+    padding:30px
+}
+.ticket
+{
+    width: 50%;
+    background-color: rgb(255, 193, 50);
+    margin:auto;
+    border: 5px solid black;
+    margin-bottom: 10px;
+}
+.ticket .row
+{
+    padding:5px 20px;
+}
+#brand
+{
+    background-color: rgb(218, 160, 0) ;
+    padding:10px;
+    text-align: center;
+}
+#brand h3
+{
+    font-size: 250%;
+}
+.ticket dt
+{
+    color:black;
+    font-size: 125%;
+}
+.ticket .col-md-4
+{
+    background-color: rgb(255, 217, 49);
+}
+.ticket dd
+{
+    color:rgb(77, 77, 77);
+    font-size:110%;
+}
+@media print  
+{
+    div{
+        page-break-inside: avoid;
+    }
+}
