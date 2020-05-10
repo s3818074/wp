@@ -4,6 +4,13 @@
 include("tools.php");
 if (empty($_SESSION["data"])) {
 	header("Location: index.php");
+} else {
+	$filename = "bookings.csv";
+	$fp = fopen($filename, "w");
+	flock($fp, LOCK_EX);
+	// put data here
+	flock($fp, LOCK_UN);
+	fclose($fp);
 }
 ?>
 
@@ -188,7 +195,7 @@ if (empty($_SESSION["data"])) {
 	<?php
 	foreach ($_SESSION['data']['seats'] as $seat => $quantity) {
 		if (empty($quantity)) continue;
-		for ($i = 1; $i < $quantity+1; $i++) {
+		for ($i = 1; $i < $quantity + 1; $i++) {
 			echo "	<div class='ticket'>
 			<div id='brand'>
 				<h3>CINEMAX</h3>

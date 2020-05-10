@@ -392,8 +392,10 @@ include('tools.php');
                 <pre><?php print_r($_GET); ?></pre>
                 <h3>$_POST contains:</h3>
                 <pre><?php print_r($_POST) ?></pre>
-                <h3>$_COOKIE contains:</h3>
-                <pre><?php print_r($_COOKIE) ?></pre>
+                <h3>$_SESSION contains:</h3>
+                <pre><?php print_r($_SESSION) ?></pre>
+                <h3>This page code: </h3>
+                <?php printMyCode() ?>
             </div>
         </section>
     </main>

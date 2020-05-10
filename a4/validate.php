@@ -90,12 +90,6 @@
     }
     if (!$isErrorFound) {
       $_SESSION["data"] = $_POST;
-      $filename = "bookings.csv";
-      $fp = fopen($filename,"w");
-      flock($fp, LOCK_EX);
-      // put data here
-      flock($fp, LOCK_UN);
-      fclose($fp);
       header("Location: receipt.php");
     }
   }
