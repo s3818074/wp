@@ -5,12 +5,7 @@ include("tools.php");
 if (empty($_SESSION["data"])) {
 	header("Location: index.php");
 } else {
-	$filename = "bookings.csv";
-	$fp = fopen($filename, "w");
-	flock($fp, LOCK_EX);
-	// put data here
-	flock($fp, LOCK_UN);
-	fclose($fp);
+	// add session data to csv
 }
 ?>
 
