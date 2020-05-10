@@ -65,15 +65,16 @@
     foreach ($_POST["seats"] as $seat => $value) {
       if ($value == "") continue;
       if (!is_numeric($value)) {
-        $warning = "Are you trying to hack our website ???";
+        $warning = "Are you trying to hack our website???";
         $isErrorFound = true;
         break;
       }
-      if ($value > $maxTicketsPerSeat) {
-        $warning = "Are you trying to hack our website ???";
+      if ($value < 1 || $value > 10) {
+        $warning = "Are you trying to hack our website???";
         $isErrorFound = true;
         break;
       }
+      $_POST["seats"][$seat] = intval($value);
       if (
         $_POST["movie"]["day"] === "MON"
         || $_POST["movie"]["day"] === "WED"
