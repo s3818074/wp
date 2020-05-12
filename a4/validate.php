@@ -44,18 +44,18 @@
       $isErrorFound = true;
     }
     // Check expiry
-    if (!preg_match("/^[0-9]{4}-[0-9]{2}$/", $_POST['cust']['expiry'])) {
+    if (!preg_match("/^[0-9]{4}-[0-9]{2}$/", $_POST["cust"]["expiry"])) {
       $expiryErr = "Invalid expiry date";
       $isErrorFound = true;
     } else {
       $minimumDate = new DateTime();
-      $minimumDate->add(new DateInterval('P28D'));
+      $minimumDate->add(new DateInterval("P28D"));
       // with only month and year, expiry date will have the first day of the month as default
       // therefore, expiry date MUST NOT be within 28 days of the purchase date by comparing months only
       // for example, when comparing a day in May and a day in June, there may be < 28 days intervals
       // however, when comparing a day in May and a day in July, there are not any < 28 days intervals
       // which means it is always valid.
-      $expiryDate = new DateTime($_POST['cust']['expiry']);
+      $expiryDate = new DateTime($_POST["cust"]["expiry"]);
       if ($expiryDate < $minimumDate) {
         $expiryErr = "Expiry date cannot be within 28 days of the purchase date";
         $isErrorFound = true;
@@ -91,6 +91,28 @@
     }
     if (!$isErrorFound) {
       $_SESSION["data"] = $_POST;
+      $filename = "bookings.csv";
+      $fp = fopen($filename, "a");
+      flock($fp, LOCK_SH);
+      $writtenData = [
+        $_SESSION["data"]["movie"]["id"],
+        $_SESSION["data"]["movie"]["day"],
+        $_SESSION["data"]["movie"]["hour"],
+        $_SESSION["data"]["seats"]["STA"],
+        $_SESSION["data"]["seats"]["STP"],
+        $_SESSION["data"]["seats"]["STC"],
+        $_SESSION["data"]["seats"]["FCA"],
+        $_SESSION["data"]["seats"]["FCP"],
+        $_SESSION["data"]["seats"]["FCC"],
+        $_SESSION["data"]["cust"]["name"],
+        $_SESSION["data"]["cust"]["email"],
+        $_SESSION["data"]["cust"]["mobile"],
+        $_SESSION["data"]["cust"]["card"],
+        $_SESSION["data"]["cust"]["expiry"],
+      ];
+      fputcsv($fp, $writtenData);
+      flock($fp, LOCK_UN);
+      fclose($fp);
       header("Location: receipt.php");
     }
   }

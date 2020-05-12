@@ -4,8 +4,6 @@
 include("tools.php");
 if (empty($_SESSION["data"])) {
 	header("Location: index.php");
-} else {
-	// add session data to csv
 }
 ?>
 
@@ -131,7 +129,7 @@ if (empty($_SESSION["data"])) {
 						<?php
 						$number = 0;
 						$total = 0;
-						foreach ($_SESSION['data']['seats'] as $seat => $quantity) {
+						foreach ($_SESSION["data"]["seats"] as $seat => $quantity) {
 							if (empty($quantity)) continue;
 							$fullOrDiscount = ($_SESSION["data"]["movie"]["day"] === "MON"
 								|| $_SESSION["data"]["movie"]["day"] === "WED"
