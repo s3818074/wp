@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
-<?php 
+<?php
 include('tools.php');
- include("validate.php");?>
+include("validate.php"); ?>
 <html lang='en'>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,7 @@ include('tools.php');
     <script src='../wireframe.js'></script>
     <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
     <header>
         <div class="jumbotron text-center header-bg">
@@ -346,40 +347,40 @@ include('tools.php');
                                     </select>
                                 </div>
                             </div>
-                            <?php displayError($warning)?>
+                            <?php displayError($warning) ?>
                         </div>
                         <div class='col-sm-6'>
                             <div class="form-group">
                                 <label for="cust[name]">Name</label>
-                                <input title='Please enter a valid name.' type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="cust-name" name="cust[name]" required>
-                                <?php displayError($nameErr)?>
+                                <input value="<?php getPreviousInput2D('cust', 'name') ?>" title='Please enter a valid name.' type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="cust-name" name="cust[name]" required>
+                                <?php displayError($nameErr) ?>
                             </div>
                             <div class="form-group">
                                 <label for="cust[email]">Email</label>
-                                <input type="email" id="cust-email" name="cust[email]" required>
-                                <?php displayError($emailErr)?>
+                                <input value="<?php getPreviousInput2D('cust', 'email') ?>" type="email" id="cust-email" name="cust[email]" required>
+                                <?php displayError($emailErr) ?>
                             </div>
                             <div class="form-group">
                                 <label type='tel' for="cust[mobile]">Mobile</label>
-                                <input title='Please enter a valid Australian mobile phone number' type="text" pattern="^(\(04\)|04|\+614)( ?\d){8}$" id="cust-mobile" name="cust[mobile]" required>
-                                <?php displayError($phoneErr)?>
+                                <input value="<?php getPreviousInput2D('cust', 'mobile') ?>" title='Please enter a valid Australian mobile phone number' type="text" pattern="^(\(04\)|04|\+614)( ?\d){8}$" id="cust-mobile" name="cust[mobile]" required>
+                                <?php displayError($phoneErr) ?>
                             </div>
                             <div class="form-group">
                                 <label for="cust[card]">Credit Card</label>
-                                <input title='Credit card number must have 14-19 digits.' type="text" pattern="^(\d\s?){14,19}$" id="cust-card" name="cust[card]" required>
-                                <?php displayError($cardErr)?>
+                                <input value="<?php getPreviousInput2D('cust', 'card') ?>" title='Credit card number must have 14-19 digits.' type="text" pattern="^(\d\s?){14,19}$" id="cust-card" name="cust[card]" required>
+                                <?php displayError($cardErr) ?>
                             </div>
                             <div class="form-group">
                                 <label for="cust[expiry]">Expiry</label>
-                                <input type='month' id='cust-expiry' name='cust[expiry]' min='2020-01' required>
-                                <?php displayError($expiryErr)?>
+                                <input value="<?php getPreviousInput2D('cust', 'expiry') ?>" type='month' id='cust-expiry' name='cust[expiry]' min='2020-01' required>
+                                <?php displayError($expiryErr) ?>
                             </div>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col-sm-10'>
                             <label id='price-display' class='primary-txt bigger-text'>Price: </label>
-                            <?php displayError($priceErr)?>
+                            <?php displayError($priceErr) ?>
                         </div>
                         <div class='col-sm-2'>
                             <input id='order' name='order' type="submit" value="Order" class="secondary-txt primary-bg btn pull-right">
@@ -388,8 +389,6 @@ include('tools.php');
                 </form>
             </div>
             <div class='superglobal'>
-                <h3>$_GET contains:</h3>
-                <pre><?php print_r($_GET); ?></pre>
                 <h3>$_POST contains:</h3>
                 <pre><?php print_r($_POST) ?></pre>
                 <h3>$_SESSION contains:</h3>
@@ -408,8 +407,10 @@ include('tools.php');
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
             Programming course at RMIT University in Melbourne, Australia.</div>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+
     </footer>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

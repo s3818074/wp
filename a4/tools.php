@@ -152,6 +152,10 @@ function filterPost($k)
     $isFieldMissing = true;
   }
 }
+function getPreviousInput2D($k1,$k2)
+{
+  echo isset($_POST[$k1][$k2]) ? test_input($_POST[$k1][$k2]) : '';
+}
 
 function displayError($error)
 {
